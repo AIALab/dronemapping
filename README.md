@@ -43,8 +43,8 @@ A free, user-friendly, extendable application and [API](http://docs.webodm.org) 
 
 * From the Docker Quickstart Terminal or Powershell (Windows), or from the command line (Mac / Linux), type:
 ```bash
-git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input
-cd WebODM
+git clone https://github.com/AIALab/dronemapping --config core.autocrlf=input
+cd dronemapping
 ./webodm.sh start
 ```
 
