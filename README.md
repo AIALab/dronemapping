@@ -1,12 +1,13 @@
-<img alt="WebODM" src="https://user-images.githubusercontent.com/1951843/34074943-8f057c3c-e287-11e7-924d-3ccafa60c43a.png" width="180">
+<img alt="WebODM" src="https://github.com/AIALab/dronemapping/blob/master/Screenshot%20from%202018-04-27%2017-10-56.png" width="180">
 
 A free, user-friendly, extendable application and [API] for drone image processing. Generate georeferenced maps, point clouds, elevation models and textured 3D models from aerial images. It uses [OpenDroneMap](https://github.com/OpenDroneMap/OpenDroneMap) for processing.
 
 * [Getting Started](#getting-started)
 
-![Alt text](https://user-images.githubusercontent.com/1951843/28586405-af18e8cc-7141-11e7-9853-a7feca7c9c6b.gif)
+![Alt text](https://github.com/AIALab/dronemapping/blob/master/screenshots/Screenshot%20from%202018-05-12%2000-21-08.png)
 
-![Alt text](/screenshots/pointcloud.png?raw=true "3D Display")
+![Alt text](https://github.com/AIALab/dronemapping/blob/master/screenshots/Screenshot%20from%202018-05-12%2000-21-26.png)
+
 
 
 ## Getting Started
