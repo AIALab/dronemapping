@@ -44,3 +44,26 @@ To stop WebODM press CTRL+C or run:
 ./webodm.sh stop
 ```
 We recommend that you read the [Docker Documentation](https://docs.docker.com/) to familiarize with the application lifecycle, setup and teardown, or for more advanced uses. Look at the contents of the webodm.sh script to understand what commands are used to launch WebODM.
+
+
+### Backup and Restore
+
+If you want to move WebODM to another system, you just need to transfer the docker volumes (unless you are storing your files on the file system).
+
+On the old system:
+
+```bash
+mkdir -v backup
+docker run --rm --volume webodm_dbdata:/temp --volume `pwd`/backup:/backup ubuntu tar cvf /backup/dbdata.tar /temp
+docker run --rm --volume webodm_appmedia:/temp --volume `pwd`/backup:/backup ubuntu tar cvf /backup/appmedia.tar /temp
+```
+
+Your backup files will be stored in the newly created `backup` directory. Transfer the `backup` directory to the new system, then on the new system:
+
+```bash
+ls backup # --> appmedia.tar  dbdata.tar
+./webodm.sh start && ./webodm.sh down # Create volumes
+docker run --rm --volume webodm_dbdata:/temp --volume `pwd`/backup:/backup ubuntu bash -c "rm -fr /temp/* && tar xvf /backup/dbdata.tar"
+docker run --rm --volume webodm_appmedia:/temp --volume `pwd`/backup:/backup ubuntu bash -c "rm -fr /temp/* && tar xvf /backup/appmedia.tar"
+./webodm.sh start
+```
